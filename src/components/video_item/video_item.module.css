@@ -18,3 +18,11 @@
     width: 200px;
     float: left;
 }
+
+.item.list {
+    width:100%;
+}
+
+.item.grid {
+    width:50%;
+}

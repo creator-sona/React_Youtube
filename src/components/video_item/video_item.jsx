@@ -1,12 +1,14 @@
 import React from 'react';
 import Style from './video_item.module.css'
 
-const VideoItem = ({video : {snippet}}) => ( 
+const VideoItem = ({video, video : {snippet}, onVideoClick, display}) => {
+    const displayTyle = display === 'list'? Style.list : Style.grid;
+    return ( 
     // 인자를 (props)라고 쓰면 아래 태그에서 값을 사용하기위해 props.video.snippet~ 이 반복된다
     // ({video : {snippet}}) 이런식으로 작성하면
     // props안에있는 video의 반복되는 snippet까지 변수로 선언한것 처럼 줄여서 사용할 수 있다.
 
-    <li className={Style.item}>
+    <li className={`${Style.item} ${displayTyle}`} onClick={() => onVideoClick(video)}>
         <img className={Style.thumbnail} 
             src={snippet.thumbnails.medium.url} />
         <div>
@@ -14,6 +16,6 @@ const VideoItem = ({video : {snippet}}) => (
             <p>{snippet.channelTitle}</p>
         </div>
     </li>
-);
+)};
 
 export default VideoItem;

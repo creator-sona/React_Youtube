@@ -22,7 +22,7 @@ const SearchHeader = ({onSearch}) => {
     return (
         <header className={Style.header}>
             <div className={Style.logo}>
-                <img src="/logo_youtube.png" alt="logo" className={Style.logoImg}/>
+                <img src="img/logo_youtube.png" alt="logo" className={Style.logoImg}/>
             </div>
             <input ref={inputRef} type="search" className={Style.searchIpt} onKeyPress={onKeyPress} placeholder="Search..."/>
             <button className={Style.searchBtn} onClick={onClick}>go!</button>
