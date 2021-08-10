@@ -1,0 +1,24 @@
+.header {
+    background: #000;
+    display: flex;
+    padding: 10px;
+}
+
+.logo {
+    width: 100px;
+    margin-right: 20px;
+}
+
+.logoImg {
+    width: 100%;
+}
+
+.searchIpt {
+    flex-basis: 100%;
+    height: 30px;
+    outline: none;
+}
+
+.searchBtn {
+    padding: 5px;
+}
