@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react';
+import { useEffect, useState, useCallback } from 'react';
 import Style from './app.module.css';
 import SearchHeader from './components/search_header/search_header';
 import VideoDetail from './components/video_detail/video_detail';
@@ -11,22 +11,24 @@ function App({ youtube }) {
     useEffect(() => {
         youtube.mostPopular()
         .then(videos => setVideos(videos));
-    }, [])
+    }, [youtube]) // []빈 배열을 인자를 넘길경우 처음 한번만 실행된다.
 
-    const onSearch = query => {
+    const search = useCallback(query => {
         youtube.search(query)
         .then(videos => {
             setVideos(videos)
             setSelectedVideo(null)
         });
-    }
+    }, [youtube]); 
+    // useCallback은 최초에 한번 메모리에 저장되는데
+    // 한번 만들면 계속 메모리에 저장하고 있기 때문에 필요한 경우에만 사용해야된다.
 
     const selectVideo = video => {
         setSelectedVideo(video);
     }
 
     return <>
-        <SearchHeader onSearch={onSearch} />
+        <SearchHeader onSearch={search} />
         <section className={Style.content}>
             {selectedVideo && 
                 <div className={Style.detail}><VideoDetail video={selectedVideo}/></div>
