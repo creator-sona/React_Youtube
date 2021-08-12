@@ -15,7 +15,9 @@ React공부를 하면서 Youtube API를 활용하여 인기 영상 조회, 영�
 - VSCode, iTerm2, Postman, Github...
 
 ## 3. 배운점
+```javascript
 
+```
 
 ## 4. 스크린샷
 - 초기 화면 진입시 유튜브 인기 영상 리스트 노출 
