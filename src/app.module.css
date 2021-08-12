@@ -1,21 +1,18 @@
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-li {
-  list-style: none;
-}
-
 .content {
-  display: flex;
+    display: flex;
 }
 
-.detail {
-  flex: 1 1 70%;
+.videoDetail {
+    flex: 1 1 70%;
+    padding: 0.2em;
 }
 
-.list {
-  flex : 1 1 30%;
+.videoList {
+    flex: 1 1 30%;
+}
+
+@media screen and (max-width: 48rem) {
+    .content {
+        flex-direction: column;
+    }
 }

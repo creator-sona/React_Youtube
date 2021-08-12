@@ -1,17 +1,13 @@
 import React, { useRef, memo } from 'react';
-import Style from './search_header.module.css';
+import Style from './search_header.module.css'
 
 const SearchHeader = memo(
-    ({onSearch}) => {
-        const inputRef = useRef();
+    ({ onSearch }) => {
+        const schIptRef = useRef();
     
         const handleSearch = () => {
-            const value = inputRef.current.value;
+            const value = schIptRef.current.value;
             onSearch(value);
-        }
-    
-        const onClick = () => {
-            handleSearch();
         }
     
         const onKeyPress = event => {
@@ -19,14 +15,16 @@ const SearchHeader = memo(
                 handleSearch();
             }
         }
-        console.log("header!!");
-        return (
+    
+        const onClick = event => {
+            handleSearch();
+        }
+    
+        return(
             <header className={Style.header}>
-                <div className={Style.logo}>
-                    <img src="./img/logo_youtube.png" alt="logo" className={Style.logoImg}/>
-                </div>
-                <input ref={inputRef} type="search" className={Style.searchIpt} onKeyPress={onKeyPress} placeholder="Search..."/>
-                <button className={Style.searchBtn} onClick={onClick}>go!</button>
+                <img className={Style.logo} src="./img/logo_youtube.png" alt="logo"/>
+                <input ref={schIptRef} className={Style.schIpt} type="search" placeholder="Search..." onKeyPress={onKeyPress}/>
+                <button className={Style.schBtn} onClick={onClick}>GO</button>
             </header>
         )
     }

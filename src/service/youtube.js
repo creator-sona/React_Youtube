@@ -1,31 +1,47 @@
+// import axios from 'axios';
+
 class Youtube {
-    constructor(key) {
-        this.key = key;
-        this.requestOptions = {
-            method: 'GET',
-            redirect: 'follow'
-        };
+    constructor(httpClient){
+        // 2. axios 라이브러리를 사용하면서도 index.js에서 선언해서 보내줄때..!
+        this.client = httpClient;
+
+        // 1. axios 라이브러리를 사용하였을때..!
+        // this.client = axios.create({
+        //     baseURL : "https://youtube.googleapis.com/v3",
+        //     params : {key: key},
+        // });
+        // axios 라이브러리를 사용하면 중복되는 baseURL과 key를 미리 정의해놓고 재사용가능하며
+        // 알아서 json으로 변환해주고, 오래된 브라우저에서도 호환가능하다.
+
+        // 0. fetch로 작업했을때 간단하게..!
+        // this.key = key;
+        // this.requestOptions = {
+        //     method: 'GET',
+        //     redirect: 'follow'
+        // };
     }
 
-    // mostPopular() {
-    //     return fetch(`https://youtube.googleapis.com/youtube/v3/videos?part=snippet&chart=mostPopular&maxResults=6&key=${this.key}`, this.requestOptions)
-    //     .then(response => response.json())
-    //     .then(result => result.items)
-    // }
-    // 위와 같이 fetch를 사용할수도 있으나 
-    // async로 작성하는것이 프로미스를 리턴한다는 것을 명시적으로 알수 있으므로 가독성에 좋다.
-
     async mostPopular() {
-        const response = await fetch(`https://youtube.googleapis.com/youtube/v3/videos?part=snippet&chart=mostPopular&maxResults=6&key=${this.key}`, this.requestOptions);
-        const result_1 = await response.json();
-        return result_1.items;
+        const response = await this.client.get("videos", {
+            params : {
+                part: 'snippet',
+                chart: 'mostPopular',
+                maxResults: 20
+            }
+        });
+        return response.data.items;
     }
 
     async search(query) {
-        const response = await fetch(`https://youtube.googleapis.com/youtube/v3/search?part=snippet&maxResults=6&q=${query}&type=video&key=${this.key}`, this.requestOptions);
-        const result_1 = await response.json();
-        const items = result_1.items.map(item => ({ ...item, id: item.id.videoId }));
-        return items;
+        const response = await this.client.get("search", {
+            params : {
+                part: 'snippet',
+                maxResults: 20,
+                q: query,
+                type: 'video'
+            }
+        });
+        return response.data.items.map(item => ({ ...item, id: item.id.videoId }))
     }
 }
 

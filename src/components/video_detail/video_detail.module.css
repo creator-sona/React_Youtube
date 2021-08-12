@@ -1,3 +1,4 @@
-.desc {
-    white-space: pre-wrap;    
+.detailArea {
+    display: flex;
+    flex-direction: column;
 }
