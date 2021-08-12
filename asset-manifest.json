@@ -1,18 +1,18 @@
 {
   "files": {
-    "main.css": "/creator-sona/React_Youtube/static/css/main.695f822d.chunk.css",
-    "main.js": "/creator-sona/React_Youtube/static/js/main.64baba24.chunk.js",
-    "main.js.map": "/creator-sona/React_Youtube/static/js/main.64baba24.chunk.js.map",
-    "runtime-main.js": "/creator-sona/React_Youtube/static/js/runtime-main.22d119ae.js",
-    "runtime-main.js.map": "/creator-sona/React_Youtube/static/js/runtime-main.22d119ae.js.map",
-    "static/js/2.01674270.chunk.js": "/creator-sona/React_Youtube/static/js/2.01674270.chunk.js",
-    "static/js/2.01674270.chunk.js.map": "/creator-sona/React_Youtube/static/js/2.01674270.chunk.js.map",
-    "index.html": "/creator-sona/React_Youtube/index.html",
-    "static/css/main.695f822d.chunk.css.map": "/creator-sona/React_Youtube/static/css/main.695f822d.chunk.css.map",
-    "static/js/2.01674270.chunk.js.LICENSE.txt": "/creator-sona/React_Youtube/static/js/2.01674270.chunk.js.LICENSE.txt"
+    "main.css": "/creator-sona/react_youtube/static/css/main.695f822d.chunk.css",
+    "main.js": "/creator-sona/react_youtube/static/js/main.64baba24.chunk.js",
+    "main.js.map": "/creator-sona/react_youtube/static/js/main.64baba24.chunk.js.map",
+    "runtime-main.js": "/creator-sona/react_youtube/static/js/runtime-main.66a0c676.js",
+    "runtime-main.js.map": "/creator-sona/react_youtube/static/js/runtime-main.66a0c676.js.map",
+    "static/js/2.01674270.chunk.js": "/creator-sona/react_youtube/static/js/2.01674270.chunk.js",
+    "static/js/2.01674270.chunk.js.map": "/creator-sona/react_youtube/static/js/2.01674270.chunk.js.map",
+    "index.html": "/creator-sona/react_youtube/index.html",
+    "static/css/main.695f822d.chunk.css.map": "/creator-sona/react_youtube/static/css/main.695f822d.chunk.css.map",
+    "static/js/2.01674270.chunk.js.LICENSE.txt": "/creator-sona/react_youtube/static/js/2.01674270.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
-    "static/js/runtime-main.22d119ae.js",
+    "static/js/runtime-main.66a0c676.js",
     "static/js/2.01674270.chunk.js",
     "static/css/main.695f822d.chunk.css",
     "static/js/main.64baba24.chunk.js"
