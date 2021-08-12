@@ -1,4 +1,4 @@
-# Youtube Clone Coding whth React
+# Youtube Clone Coding with React
 React공부를 하면서 Youtube API를 활용하여 인기 영상 조회, 영상 검색 등의 간단한 SPA를 구현하였다.  [Link🔍](https://sonayaa.github.io/react_youtube)
 
 ## 1. 프로젝트 기능
