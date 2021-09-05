@@ -1,5 +1,7 @@
 # Youtube Clone Coding with React
-React공부를 하면서 Youtube API를 활용하여 인기 영상 조회, 영상 검색 등의 간단한 SPA를 구현하였다.  [Link🔍](https://sonayaa.github.io/react_youtube)
+React공부를 하면서 Youtube API를 활용하여 인기 영상 조회, 영상 검색 등의 간단한 SPA를 구현하였다.
+
+Pages😎 : https://sonayaa.github.io/react_youtube
 
 ## 1. 프로젝트 기능
 1. 초기 화면 진입시 인기 영상 리스트 노출
@@ -14,10 +16,12 @@ React공부를 하면서 Youtube API를 활용하여 인기 영상 조회, 영�
 - Axios
 - VSCode, iTerm2, Postman, Github...
 
+<!--
 ## 3. 배운점
 ```javascript
 
 ```
+-->
 
 ## 4. 스크린샷
 - 초기 화면 진입시 유튜브 인기 영상 리스트 노출 
